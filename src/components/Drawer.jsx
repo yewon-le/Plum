@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 import searchIcon from "../images/search.png"; // 아이콘 이미지 경로
 import styled from "styled-components";
+import "./Drawer.css";
+
 
 
 const Drawer = () => {
 
   const [isLeftDrawerOpen, setIsLeftDrawerOpen] = useState(false);
   const [isRightDrawerOpen, setIsRightDrawerOpen] = useState(false);
-
 
       // 헤더 스타일
     const ToggleHeader = styled.header`
@@ -146,7 +147,7 @@ const Drawer = () => {
       <LeftDrawer open={isLeftDrawerOpen}>
         <div className="drawer-left">
           <div className="left-drawer-home">HOME</div>
-          <div className="left-drawer-made">맞춤추천</div>
+          <div className="left-drawer-made" >맞춤추천</div>
           <div className="left-drawer-recently">최근음악</div>
           <div className="left-drawer-popular">인기차트</div>
           <div className="left-drawer-library">라이브러리</div>
