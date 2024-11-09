@@ -1,6 +1,54 @@
 import React, { useRef } from "react";
 import "./Main.css";
+import logo from "../images copy/logo.png";
+import searchIcon from "../images copy/search.png"; // 아이콘 이미지 경로
+import styled from "styled-components";
 
+
+//Header
+const Header = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const handleInputChange = (e) => {
+    setSearchQuery(e.target.value);
+  };
+
+  const handleSearch = () => {
+    if (searchQuery.trim() !== "") {
+      console.log("Searching for:", searchQuery);
+    }
+  };
+
+  return (
+    <div>
+      <div className="header">
+        <div className="header-content-box">
+          <div className="logo">
+            <img src={logo} alt="Logo" />
+          </div>
+          <div className="search-bar">
+            <input
+              className="search-input-text"
+              placeholder="Search"
+              value={searchQuery}
+              onChange={handleInputChange}
+            />
+            <button onClick={handleSearch} className="search-button">
+              <img src={searchIcon} alt="Search" className="search-icon" />{" "}
+              {/* 아이콘 이미지 추가 */}
+            </button>
+          </div>
+          <div className="login-button">Login</div>
+        </div>
+      </div>
+      <div className="header-size-box"></div>
+    </div>
+  );
+};
+
+//Header
+
+// Main
 const Main = () => {
   // useRef로 리스트 요소 참조
   const madeListRef = useRef(null);
@@ -129,5 +177,106 @@ const Main = () => {
     </div>
   );
 };
+//Main
+
+
+//Drawer
+
+const Drawer = () => {
+  const [isLeftDrawerOpen, setIsLeftDrawerOpen] = useState(false);
+  const [isRightDrawerOpen, setIsRightDrawerOpen] = useState(false);
+
+  // 왼쪽 드로어 스타일
+  const LeftDrawer = styled.div`
+    transform: translateX(${(props) => (props.open ? "0" : "-100%")});
+  `;
+ // 오른쪽 드로어 스타일
+  const RightDrawer = styled.div`
+    transform: translateX(${(props) => (props.open ? "0" : "100%")});
+  `;
+
+  return (
+    <nav className="nav">
+      <div className="toggle-header">
+        {/* 왼쪽 드로어 토글 버튼 */}
+        <div
+          className="left-drawer-toggle-btn"
+          onClick={() => setIsLeftDrawerOpen(!isLeftDrawerOpen)}
+        >
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </div>
+
+        {/* 오른쪽 드로어 토글 버튼 */}
+        <div
+          className="right-drawer-toggle-btn"
+          onClick={() => setIsRightDrawerOpen(!isRightDrawerOpen)}
+        >
+          <svg viewBox="0 0 100 80" width="40" height="40">
+            <rect width="100" height="20"></rect>
+            <rect y="30" width="100" height="20"></rect>
+            <rect y="60" width="100" height="20"></rect>
+          </svg>
+        </div>
+      </div>
+
+      {/* 왼쪽 드로어 */}
+      <LeftDrawer className="left-drawer" open={isLeftDrawerOpen}>
+        <div className="drawer-left">
+          <div className="left-drawer-menu-btn">HOME</div>
+          <div className="left-drawer-btn">맞춤추천</div>
+          <div className="left-drawer-btn">최근음악</div>
+          <div className="left-drawer-btn">인기차트</div>
+          <div className="left-drawer-menu-btn">라이브러리</div>
+          <div className="left-drawer-btn">재생목록</div>
+          <div className="left-drawer-btn">좋아요 누른 음악</div>
+          <div className="left-drawer-btn">내 아티스트</div>
+        </div>
+      </LeftDrawer>
+
+      {/* 오른쪽 드로어 */}
+      <RightDrawer className="right-drawer" open={isRightDrawerOpen}>
+        <div className="profile-list">
+          <li>
+            <img src="https://via.placeholder.com/50" alt="Profile" />
+            <p>
+              <span>yewon</span>
+              <br />
+              {/* <img src={playIcon} className="play-icon" />*/}
+              Kanye West - Runaway
+            </p>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/50" alt="Profile" />
+            <p>
+              <span>nayoon</span>
+              <br />
+              Kanye West - Runaway
+            </p>
+          </li>
+          <li>
+            <img src="https://via.placeholder.com/50" alt="Profile" />
+            <p>
+              <span>jaehyun</span>
+              <br />
+              Kanye West - Runaway
+            </p>
+          </li>
+        </div>
+      </RightDrawer>
+    </nav>
+  );
+};
+
+
+//Drawer
+
+
+
+
 
 export default Main;
+
