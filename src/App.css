@@ -1,22 +1,25 @@
-  /* 드로워 스타일 */
-  .drawer-left {
-    grid-area: drawer-left;
-    margin-top: 80px;
-    transition: 0.3s ease;
-  }
-  
-  .drawer-right {
-    grid-area: drawer-right;
-    transition: 0.3s ease;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .content-wrapper{
-    margin-top: 300px;
-  }
+html,
+body {
+  height: 100%;
+  background-color: #191919;
+}
 
-  .popluar-bar{
-    justify-content: left;
-    
-   }
+.layout {
+  position: relative;
+}
 
-   
+.content-wrapper {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.popluar-bar {
+  justify-content: left;
+}

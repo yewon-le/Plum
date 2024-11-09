@@ -1,0 +1,145 @@
+/* 헤더 스타일 */
+.toggle-header {
+  position: fixed;
+  top: 25px;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 20; /* 드로어보다 위에 오도록 설정 */
+}
+
+/* 왼쪽 드로어 스타일 */
+.left-drawer {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 240px;
+  height: 100%;
+  background-color: #191919;
+  color: white;
+  transition: transform 0.3s ease;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.drawer-left{
+  margin-top: 70px
+}
+
+/* 왼쪽 드로어 토글 버튼 스타일 */
+.left-drawer-toggle-btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #696969;
+  }
+}
+
+/* 왼쪽 드로어 메뉴 버튼 스타일 */
+.left-drawer-btn {
+  text-align: left;
+  margin-left: 20px;
+  padding: 16px;
+  border-radius: 5px;
+  margin-top: 5px;
+  width: 95%;
+  height: 50px;
+  cursor: pointer;
+  color: #8d8b8b;
+  font-weight: bold;
+  font-size: 14px;
+
+  &:hover {
+    background-color: #272727;
+    color: white;
+  }
+  transition: 0.3s;
+}
+
+.left-drawer-menu-btn{
+  text-align: left;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+/* 오른쪽 드로어 스타일 */
+.right-drawer {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  right: 0;
+  width: 240px;
+  height: 100%;
+  background-color: #1e1e1e;
+  color: white;
+  transition: transform 0.3s ease;
+  padding: 20px;
+}
+
+/* 오른쪽 드로어 토글 버튼 스타일 */
+.right-drawer-toggle-btn {
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #1e1e1e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    fill: #696969;
+  }
+}
+
+/*오른쪽 드로어 내부 프로필 리스트 스타일*/
+.profile-list {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.profile-list li {
+  margin-top: 70px;
+  margin-bottom: -40px;
+  display: flex;
+  align-items: center;
+}
+
+.profile-list img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+
+.profile-list p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.profile-list span {
+  font-size: 16px;
+  font-weight: bold;
+}
