@@ -23,3 +23,7 @@ body {
 .popluar-bar {
   justify-content: left;
 }
+
+::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}

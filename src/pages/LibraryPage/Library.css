@@ -1,0 +1,6 @@
+/* 최상위 컨테이너 */
+.container {
+  width: 65%;
+  flex-direction: column;
+  background-color: #191919;
+}

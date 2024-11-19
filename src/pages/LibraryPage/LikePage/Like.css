@@ -1,0 +1,121 @@
+.like-box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.like-overlap {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.overlap-item-wrapper {
+  width: 80%;
+}
+
+.overlap-item-box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  height: 344px;
+}
+
+.overlap-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.overlap-item-wrapper .btn-box {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.play-btn {
+  background-color: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding-left: 4px;
+}
+
+.overlap-item {
+  padding: 8px;
+  position: absolute;
+}
+
+.overlap-item img {
+  width: 264px;
+  border-radius: 12px;
+  border: 1px solid #fff;
+}
+
+.overlap-item:nth-child(1) {
+  z-index: 3;
+}
+
+.overlap-item:nth-child(2) {
+  z-index: 2;
+  margin-top: 8px;
+  margin-left: 8px;
+}
+
+.overlap-item:nth-child(3) {
+  z-index: 1;
+  margin-top: 16px;
+  margin-left: 16px;
+}
+
+.like-list {
+  width: 60%;
+}
+
+.like-list-item {
+  width: 100%;
+  padding: 16px 8px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.like-list-item .item {
+  display: flex;
+}
+
+.like-list-item img {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+}
+
+.like-list-item .item-text {
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.item-text .title {
+  color: #fff;
+  font-size: 20px;
+}
+
+.item-text .singer {
+  color: #555;
+  font-size: 16px;
+}
+
+.like-list-item .heart {
+  color: #fe35a6;
+  font-size: 20px;
+  padding-top: 24px;
+  padding-right: 20px;
+}

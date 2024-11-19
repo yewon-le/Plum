@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import "./Header.css";
 import logo from "../images/logo.png";
 import searchIcon from "../images/search.png"; // 아이콘 이미지 경로
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
 
   const handleInputChange = (e) => {
@@ -20,8 +22,12 @@ const Header = () => {
     <div>
       <div className="header">
         <div className="header-content-box">
-          <div className="logo">
-            <img src={logo} alt="Logo" />
+          <div
+            className="logo"
+          >
+            <img src={logo} alt="Logo" 
+            onClick={() => navigate("/")}
+            style={{ cursor: "pointer" }}/>
           </div>
           <div className="search-bar">
             <input

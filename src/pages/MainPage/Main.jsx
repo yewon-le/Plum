@@ -114,7 +114,7 @@ const Main = () => {
   }
 
   return (
-    <div className="container">
+    <div className="main-container">
       <div className="title">Home</div>
       <div>
         <p className="mini-title">맞춤추천</p>

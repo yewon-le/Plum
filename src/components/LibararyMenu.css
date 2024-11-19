@@ -1,0 +1,38 @@
+.menu-wrapper {
+  width: 100%;
+  border-bottom: 2px solid #2e2e2e;
+  padding: 10px 0;
+}
+
+.menu-title{
+  color: #fff;
+  font-size: 32px;
+  font-weight: bold;
+  padding: 0 0 24px 5px;
+}
+
+.menu-box {
+  display: flex;
+  width: 36%;
+  justify-content: space-around;
+}
+
+.menu-btn {
+  color: #aaa;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: #2e2e2e;
+    color: #fff;
+  }
+  transition: 0.3s;
+}
+
+.highlighted {
+  color: #fff;
+  background-color: #2e2e2e;
+  font-weight: bold;
+}

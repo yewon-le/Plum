@@ -1,0 +1,42 @@
+.artist-box {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+}
+
+.artist{
+    width: 100%;
+}
+
+.artist-item{
+    width: 100%;
+    padding: 16px 8px;
+    border-bottom: 1px solid #2e2e2e;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item{
+    display: flex;
+}
+
+.artist-item img{
+    width: 120px;
+    border-radius: 16px;
+}
+
+.artist-item .item-text{
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    color: #aaa;
+}
+
+.artist-item .arrow{
+    color: #555;
+    font-size: 50px;
+    padding-top: 20px;
+    padding-right: 20px;
+}

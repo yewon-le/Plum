@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import "./Drawer.css";
+import { useNavigate } from "react-router-dom";
 
 const Drawer = () => {
+  const navigate = useNavigate();
   const [isLeftDrawerOpen, setIsLeftDrawerOpen] = useState(false);
   const [isRightDrawerOpen, setIsRightDrawerOpen] = useState(false);
 
@@ -51,9 +53,9 @@ const Drawer = () => {
           <div className="left-drawer-btn">최근음악</div>
           <div className="left-drawer-btn">인기차트</div>
           <div className="left-drawer-menu-btn">라이브러리</div>
-          <div className="left-drawer-btn">재생목록</div>
-          <div className="left-drawer-btn">좋아요 누른 음악</div>
-          <div className="left-drawer-btn">내 아티스트</div>
+          <div className="left-drawer-btn" onClick={() => navigate("/library/playlist")}>재생목록</div>
+          <div className="left-drawer-btn" onClick={() => navigate("/library/like")}>좋아요 누른 음악</div>
+          <div className="left-drawer-btn" onClick={() => navigate("/library/artist")}>내 아티스트</div>
         </div>
       </LeftDrawer>
 
