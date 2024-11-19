@@ -1,45 +1,50 @@
-.select-content-wrapper{
-    flex-direction: column;
-    background-color: #191919;
+.Select-Container {
     display: flex;
-  }
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100vh;
+    background-color: #191919;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 200px;
+}
 
-/* .select-logo img {
-    width: 200px;
-    height: 200px;
-    justify-content: center; 
-    align-items: center;    
-    margin-top: -30px;   
-    
-} */
 
+.select-logo {
+    margin-top: -30px;
+}
+
+.select-logo img {
+    width: 250px;
+    height: auto;
+}
 .select-title{
-  margin-top: 10px;
+margin-top: -10px;
   color: white;
   font-weight: bold;
-  font-size: 18px; /* 여기에 px 단위를 사용하여 절대 크기로 지정 */
+  font-size: 18px;
   text-align: center;
-    
 }
 
-/* 아티스트 리스트 컨테이너 */
 .artist-container {
     display: flex;
-    flex-wrap: wrap; /* 줄이 넘칠 경우 다음 줄로 배치 */
-    justify-content: center; /* 가로 중앙 정렬 */
-    align-items: center; /* 세로 중앙 정렬 */
-    gap: 20px; /* 각 아이템 사이의 간격 */
-    padding: 50px 20px; /* 위 아래 여백과 좌우 여백 */
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center; 
+    gap: 20px; 
+    padding: 50px 20px;
     max-width: 1200px;
-    margin: 0 auto; /* 가운데 정렬 */
+    margin: 0 auto; 
 }
 
-/* 아티스트 리스트 아이템 */
 .artist-list {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; /* 가로 중앙 정렬 */
+    justify-content: center; 
 }
 
 /* 아티스트 앨범 박스 */
@@ -48,14 +53,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px; /* 앨범 커버와 제목을 포함할 수 있는 충분한 너비 */
+    width: 200px; 
     height: 200px;
     text-align: center;
     border:none;
     padding: 15px;
     margin-top: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 그림자 효과 */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 호버 시 애니메이션 효과 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* 앨범 이미지 스타일 */
@@ -82,14 +87,26 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 그림자 강조 */
 }
 
-.select-button-container{
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
+
+.select-button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
-/* .select-button{
-    justify-content: center;
-    justify-items: center;
-    align-items: center;
-} */
+
+.select-button{ 
+    width: 300px;
+    height: 50px;
+    padding: 12px;
+    background-color: #FD32A6;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 20px;    
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}

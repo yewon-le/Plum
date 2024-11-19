@@ -41,7 +41,7 @@ const Header = () => {
               {/* 아이콘 이미지 추가 */}
             </button>
           </div>
-          <div className="login-button">Login</div>
+          <div className="header-login-button">Login</div>
         </div>
       </div>
       <div className="header-size-box"></div>

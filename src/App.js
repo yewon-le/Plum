@@ -1,6 +1,8 @@
 import "./App.css";
 import Header from "./components/Header";
 import Main from "./pages/MainPage/Main";
+import Login from "./pages/LoginPage/Login";
+import SignUp from "./pages/SignupPage/SignUp"
 import Library from "./pages/LibraryPage/Library";
 import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 import SelectArtist from "./pages/SelectPage/SelectArtist";
@@ -14,7 +16,7 @@ function AppContent() {
   const [isRightDrawerOpen, setIsRightDrawerOpen] = useState(false);
 
   // select-artist와 select-genre 경로에서 Header와 Drawer를 숨김
-  const showHeaderAndDrawer = !["/select-artist", "/select-genre"].includes(location.pathname);
+  const showHeaderAndDrawer = !["/select-artist", "/select-genre", "/Login","/login", "/signup"].includes(location.pathname);
 
   return (
     <>
@@ -29,6 +31,8 @@ function AppContent() {
         <Routes>
           <Route path="main" element={<Main />} />
           <Route path="/" element={<Main />} />
+          <Route path="login" element={<Login />} />
+          <Route path="signup" element={<SignUp />} />
           <Route path="select-artist" element={<SelectArtist />} />
           <Route path="select-genre" element={<SelectGenre />} />
           <Route path="library/*" element={<Library/>} />
