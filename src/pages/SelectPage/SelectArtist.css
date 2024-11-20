@@ -37,7 +37,6 @@ margin-top: -10px;
     gap: 20px; 
     padding: 50px 20px;
     max-width: 1200px;
-    margin: 0 auto; 
 }
 
 .artist-list {
@@ -56,22 +55,27 @@ margin-top: -10px;
     width: 200px; 
     height: 200px;
     text-align: center;
-    border:none;
     padding: 15px;
+    border: 2px solid;
     margin-top: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* overflow: hidden;  */
 }
 
 /* 앨범 이미지 스타일 */
 .artist-album-cover img {
-    width: 200px; /* 앨범 커버 이미지 크기 */
-    height: 200px;
+    margin-top: -15px;
+    width: 195px; /* 앨범 커버 이미지 크기 */
+    height: 195px;
     object-fit: cover; /* 이미지 비율 유지 */
+    cursor: pointer;
+
 }
 
 /* 아티스트 이름 스타일 */
 .artist-title-box {
+    
     margin-top: 15px;
 }
 
@@ -84,11 +88,17 @@ margin-top: -10px;
 .artist-album-box:hover {
     transform: translateY(-10px); /* 위로 살짝 떠오르는 효과 */
     border-color: #FD32A6;
+    transition: border-color 0.3s;
+
 }
 
 
 .artist-album-box.selected {
     border: 2px solid #FD32A6; /* 원하는 색으로 변경 */
+    transition: border-color 0.3s;
+    cursor: pointer;
+
+    
   }
 
 
@@ -102,10 +112,11 @@ margin-top: -10px;
 
 
 .select-button{ 
-    width: 300px;
+    width: 250px;
     height: 50px;
     padding: 12px;
     background-color: #FD32A6;
+    border: 1px solid #FD32A6;
     color: black;
     font-size: 16px;
     font-weight: bold;
