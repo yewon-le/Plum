@@ -81,11 +81,15 @@ margin-top: -10px;
     color: #ffffff; /* 흰색 텍스트 */
 }
 
-/* 호버 효과 (앨범 박스에 마우스를 올렸을 때) */
 .artist-album-box:hover {
     transform: translateY(-10px); /* 위로 살짝 떠오르는 효과 */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* 그림자 강조 */
+    border-color: #FD32A6;
 }
+
+
+.artist-album-box.selected {
+    border: 2px solid #FD32A6; /* 원하는 색으로 변경 */
+  }
 
 
 .select-button-container {

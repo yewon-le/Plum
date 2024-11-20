@@ -30,7 +30,7 @@
 
 .content-box {
     width: 100%;
-    max-width: 1000px;
+    max-width: 700px;
     padding: 20px;
     border-radius: 10px;
 }
@@ -39,11 +39,11 @@
 .input-pw {
     all: unset; /* 기본 속성을 초기화 */
     display: block;
-    width: 400px;
+    width: 350px;
     height: 50px;
     background: none;    
-    border: 2px solid ;
-    border-radius: 20px;
+    border: 1px solid ;
+    border-radius: 30px;
     margin-bottom: 20px;
     padding: 10px;
     color: white;
@@ -71,14 +71,14 @@ transition: border-color 0.3s;
 }
 
 .login-button {
-    width: 400px;
+    width: 350px;
     height: 50px;
     padding: 12px;
     background-color: #FD32A6;
     color: black;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 20px;    
+    border-radius: 30px;    
     cursor: pointer;
     text-align: center;
     transition: background-color 0.3s;
