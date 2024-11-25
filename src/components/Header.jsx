@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Header.css";
 import logo from "../images/logo.png";
 import searchIcon from "../images/search.png"; // 아이콘 이미지 경로
 import { useNavigate } from "react-router-dom";
