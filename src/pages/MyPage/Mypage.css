@@ -1,0 +1,88 @@
+.container {
+  width: 65%;
+  flex-direction: column;
+  background-color: #191919;
+  padding: 0 12px 12px 12px;
+}
+
+.mypage-title{
+  color: #fff;
+  font-weight: bold;
+  font-size: 32px;
+  padding-bottom: 24px;
+}
+
+.info-box{
+  padding: 24px 48px;
+  background-color: #202020;
+  border-radius: 4px;
+}
+
+.info-box-title{
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 30px;
+}
+
+.info-img{
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #fff
+}
+
+.profile-box{
+  display: flex;
+}
+
+.profile-info{
+  padding-left: 32px;
+  width: 85%;
+}
+
+.profile-info-item{
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  font-weight: bold;
+}
+
+.profile-info-item input{
+  border: 1px solid #aeaeae;
+  font-size: 16px;
+  padding: 6px 4px 6px 8px;
+  margin: 4px 0 8px 0;
+  border-radius: 3px;
+  background-color: #202020;
+  color: #aeaeae;
+}
+
+.update-profile{
+  display: flex;
+  justify-content: flex-end;
+  padding: 32px 8px 0 0;
+}
+
+.update-btn{
+  padding: 5px 8px;
+  border-radius: 4px;
+  background-color: #fd32a6;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.update-cancel{
+  padding: 5px 8px;
+  border-radius: 4px;
+  background-color: #555;
+  font-weight: bold;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 10px;
+}
