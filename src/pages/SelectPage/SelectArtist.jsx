@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import "./SelectArtist.css";
 import logo from "../../images/logo.png";
-import artistImage from "../../images/aespa.png";
+import aespa from "../../images/aespa.png";
+import giriboy from "../../images/giriboy.webp"
 
 const ArtistNames = [
   {
-    ArtistImage: artistImage,
-    singer: "noname",
+    ArtistImage: aespa,
+    singer: "aespa",
   },
   {
-    ArtistImage: "https://via.placeholder.com/50",
-    singer: "noname2",
+    ArtistImage: giriboy,
+    singer: "기리보이",
   },
   {
     ArtistImage: "https://via.placeholder.com/50",

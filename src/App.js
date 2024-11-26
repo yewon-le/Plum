@@ -20,8 +20,8 @@ import Drawer from "./components/Drawer";
 import { useState } from "react";
 
 function AppContent() {
-  const location = useLocation();
   const navigate = useNavigate();
+  const location = useLocation();
   const [isLeftDrawerOpen, setIsLeftDrawerOpen] = useState(false);
   const [isRightDrawerOpen, setIsRightDrawerOpen] = useState(false);
 
@@ -44,7 +44,6 @@ function AppContent() {
     "/signup",
     "/chatmodal",
   ].includes(location.pathname);
-
   return (
     <>
       {showHeaderAndDrawer && (
@@ -53,6 +52,8 @@ function AppContent() {
           toggleRightDrawer={() => setIsRightDrawerOpen(!isRightDrawerOpen)}
         />
       )}
+
+      {/* 모달이 열려 있지 않으면 드로워 표시 */}
       {showHeaderAndDrawer && <Drawer open={isLeftDrawerOpen} side="left" />}
       <div className="content-wrapper">
         <Routes>
@@ -64,7 +65,6 @@ function AppContent() {
           <Route path="select-genre" element={<SelectGenre />} />
           <Route path="library/*" element={<Library />} />
           <Route path="mypage" element={<Mypage />} />
-          <Route path="chatmodal" element={<ChatModal />} />
         </Routes>
         <ChatButton openModal={openModal} navigate={navigate} />
         <ChatModal isOpen={modalIsOpen} closeModal={closeModal} />
